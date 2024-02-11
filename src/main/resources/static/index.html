@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig1</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<style>
+
+  input {
+    display: inline-block;
+    width: 150px;
+  }
+
+
+  span {
+    display: inline-block;
+    color: red;
+  }
+
+  .bilettliste-table td {
+    text-align: center;
+  }
+
+  /* Center align the content vertically */
+  .bilettliste-table td, .bilettliste-table th {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Add spacing between rows */
+  .bilettliste-table tr {
+    margin-bottom: 10px; /* Adjust the value as needed */
+  }
+
+  /* Add spacing between cells */
+  .bilettliste-table td, .bilettliste-table th {
+    padding: 10px; /* Adjust the value as needed */
+  }
+
+</style>
+
+<h3 style="font-size: 30px">Bestilling av kinobiletter</h3>
+
+<form id="bilettForm">
+  <table>
+    <tr>
+      <td>
+        Velg film:
+      </td>
+      <td>
+        <select id="film">
+          <option value="" disabled selected>Velg film her</option>
+          <option>Avengers</option>
+          <option>Ringenes herre</option>
+          <option>Star wars</option>
+        </select>
+        <span id="filmfeil" class="feil-melding"></span>
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Antall:
+      </td>
+      <td>
+        <input id="antall" type="number" value="" style="width: 35px;" />
+        <span id="feilmeldingantall" class="feil-melding"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 40px; text-align: left;">
+        Fornavn:
+      </td>
+      <td>
+        <input id="fornavn" type="text" value="" />
+        <span id="feilmeldingfornavn" class="feil-melding"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 40px; text-align: left;">
+        Etternavn:
+      </td>
+      <td>
+        <input id="etternavn" type="text" value="" />
+        <span id="feilmeldingetternavn" class="feil-melding"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 40px; text-align: left;">
+        Telefonnr:
+      </td>
+      <td>
+        <input id="telefonnr" type="number" value="" />
+        <span id="feilmeldingtelefonnr" class="feil-melding"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 40px; text-align: left;">
+        Epost:
+      </td>
+      <td>
+        <input id="epost" type="text" value="" />
+        <span id="feilmeldingepost" class="feil-melding"></span>
+      </td>
+    </tr>
+  </table>
+  <button type="button" onclick="registrerbilett()">Registrer bilett</button>
+</form>
+
+
+
+<h2>Alle biletter</h2>
+<form id="bilettliste"></form>
+<button onclick="slettbiletter()">Slett alle bilettene</button>
+</body>
+</html>
